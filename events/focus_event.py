@@ -63,20 +63,11 @@ class Example(wx.Frame):
             (MyWindow(self), 0, wx.EXPAND|wx.BOTTOM|wx.LEFT, 9),
             (MyWindow(self), 0, wx.EXPAND|wx.BOTTOM|wx.RIGHT, 9)])
 
-
         self.SetSizer(grid)
 
         self.SetSize((350, 250))
         self.SetTitle('Focus event')
         self.Centre()
-
-
-    def OnMove(self, e):
-
-        print(e.GetEventObject())
-        x, y = e.GetPosition()
-        self.st1.SetLabel(str(x))
-        self.st2.SetLabel(str(y))
 
 
 def main():
